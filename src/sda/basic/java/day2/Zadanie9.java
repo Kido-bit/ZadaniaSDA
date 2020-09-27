@@ -15,10 +15,8 @@ public class Zadanie9 {
     private static String getLongestName(List<String> nameList) {
         String longestNameStr = "";
         for (int i = 0; i < nameList.size(); i++) {
-            if (nameList.get(i).length() >= nameList.get(0).length()) {
+            if (nameList.get(i).length() > longestNameStr.length()) {
                 longestNameStr = nameList.get(i);
-            } else {
-                longestNameStr = nameList.get(0);
             }
         }
         return longestNameStr;

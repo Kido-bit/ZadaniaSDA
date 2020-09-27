@@ -11,12 +11,10 @@ public class Zadanie10 {
         System.out.println(getLastLetterWord(wordsArray));
     }
 
-    private static char getLastLetterWord(String[] wordsArray) {
-        char lastLetter = 0;
-        for (int i = 0; i < wordsArray.length; i++) {
-            lastLetter = wordsArray[i].charAt(wordsArray[i].length() - 1);
-        }
-        return lastLetter;
+    private static int getNumberOfWords(Scanner scanner) {
+        System.out.println("How many words would You like to insert?");
+        int numberOfWords = scanner.nextInt();
+        return numberOfWords;
     }
 
     private static String[] getWords(Scanner scanner, int number) {
@@ -30,9 +28,11 @@ public class Zadanie10 {
         return wordsArray;
     }
 
-    private static int getNumberOfWords(Scanner scanner) {
-        System.out.println("How many words would You like to insert?");
-        int numberOfWords = scanner.nextInt();
-        return numberOfWords;
+    private static char getLastLetterWord(String[] wordsArray) {
+        char lastLetter = 0;
+        for (int i = 0; i < wordsArray.length; i++) {
+            lastLetter = wordsArray[i].charAt(wordsArray[i].length() - 1);
+        }
+        return lastLetter;
     }
 }
